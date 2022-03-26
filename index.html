@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pixel Art Maker</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Righteous&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+Da+2&display=swap">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Page layout -->
+  <div class="grid-page">
+    <!-- Logo -->
+    <div class="logo">
+      <h1>Pixel Art Maker</h1>
+    </div>
+    <!-- Program -->
+    <div class="program">
+      <!-- Customization section -->
+      <div class="customization">
+        <h2 class="customization-heading">Customization</h2>
+        <form class="customization-form">
+          <!-- Grid design -->
+          <div class="grid-customization-form">
+            <label for="height-picker">Height: </label>
+            <input type="number" name="height-picker" id="height-picker" class="dimensions-pickers" placeholder="Height">
+            <label for="width-picker">Width: </label>
+            <input type="number" name="width-picker" id="width-picker" class="dimensions-pickers" placeholder="Width">
+            <label for="color-input">Color: </label>
+            <div class="color-box">
+              <input type="text" name="color-input" id="color-input" class="color-input" placeholder="Type Hex">
+              <input type="color" name="color-picker" id="color-picker" class="color-picker">
+            </div>
+            <button type="button" id="make-button" class="make-button">Make</button> 
+            <button type="button" id="erase-all-button" class="erase-all-button">Erase All</button> 
+            <a id="download-link" download="Pixel-Art.png" style="display: none;"></a>
+          </div>
+        </form>
+      </div>
+      <!-- Painting section -->
+      <div class="painting">
+        <!-- options buttons -->
+        <div class="options">
+          <button type="button" id="download-button" class="options-buttons"><i class="fa fa-download"></i></button>
+          <button type="button" id="zoom-out-button" class="options-buttons"><i class="fa fa-search-minus"></i></button>
+          <button type="button" id="zoom-in-button" class="options-buttons"><i class="fa fa-search-plus"></i></button>
+          <button type="button" id="draw-button" class="options-buttons"><i class="fa fa-paint-brush"></i></button>
+          <button type="button" id="eraser-button" class="options-buttons"><i class="fa fa-eraser"></i></button>
+        </div>
+        <!-- draw painting -->
+        <div class="drawing">
+          <table id="pixel-grid" class="pixel-grid"></table>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="js/html2canvas.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

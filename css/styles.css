@@ -1,0 +1,205 @@
+/* Framework */
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --td-dimensions: 20px;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Baloo Da 2", sans-serif;
+  background: url("../images/01.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.active {
+  color: #000000 !important;
+}
+
+/* page layout design */
+.grid-page {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  padding: 30px 0;
+  grid-gap: 25px;
+  grid-template-columns: auto;
+  grid-template-rows: 5vh 78vh;
+  justify-items: center;
+  align-items: center;
+}
+
+/* Logo design */
+.grid-page .logo {
+  color: #ffffff;
+  font: 400 16px "Righteous", cursive;
+}
+
+.grid-page .logo h1 {
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Program design */
+.grid-page .program {
+  display: flex;
+  width: 90%;
+  height: 100%;
+  border: 1px solid #000000;
+  border-radius: 10px;
+}
+
+/* Customization section styles */
+.grid-page .program .customization {
+  width: 30%;
+  height: 100%;
+  padding: 20px;
+  border-right: 1px solid #cccccc;
+  border-radius: 10px 0 0 10px;
+  color: #2c2c2c;
+  background-color: #ffffff;
+}
+
+.grid-page .program .customization .customization-heading {
+  padding: 15px 0;
+  border-bottom: 1px solid #dddddd;
+  margin: 0;
+  font-size: 27px;
+}
+
+.grid-page .program .customization .customization-form .grid-customization-form {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  padding: 30px 0;
+  grid-template-columns: repeat(2, auto);
+  grid-gap: 20px 10px;
+  align-items: center;
+}
+
+.grid-page .program .customization .customization-form label {
+  cursor: text;
+  font-size: 19px;
+}
+
+.grid-page .program .customization .customization-form .dimensions-pickers {
+  width: 100%;
+  height: 30px;
+  border: 1px solid #666666;
+  font-size: 17px;
+}
+
+.grid-page .program .customization .customization-form .color-box {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: 85% 15%;
+  grid-template-rows: 30px;
+}
+
+.grid-page .program .customization .customization-form .color-box .color-input {
+  width: 95%;
+  height: 100%;
+	padding: 0 5px;
+  border: 1px solid #666666;
+  border-radius: 10px;
+	font-size: 17px;
+}
+
+.grid-page .program .customization .customization-form .color-box .color-picker {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+  background: none;
+}
+
+.grid-page .program .customization .customization-form .make-button {
+  width: 100%;
+  height: 35px;
+  border: 0;
+  outline: 0;
+  border-radius: 15px;
+  font-size: 18px;
+  grid-column: 1 / 3;
+  cursor: pointer;
+  background-color: #ffffff;
+  box-shadow: 0 0 5px #dddddd;
+}
+
+.grid-page .program .customization .customization-form .make-button:hover {
+  border: 1px solid #dddddd;
+}
+
+.grid-page .program .customization .customization-form .erase-all-button {
+  width: 100%;
+  height: 20px;
+  border: 0;
+  outline: 0;
+  font-size: 16px;
+  grid-column: 1 / 3;
+  cursor: pointer;
+  color: #1270ff;
+  background: none;
+}
+
+.grid-page .program .customization .customization-form .erase-all-button:hover {
+  text-decoration: underline;
+}
+
+/* Painting section styles */
+.grid-page .program .painting {
+  display: grid;
+  width: 70%;
+  height: 100%;
+  padding: 15px;
+  border-radius: 0 10px 10px 0;
+  grid-template-columns: auto;
+  grid-template-rows: 40px auto;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+.grid-page .program .painting .options {
+  cursor: default;
+  border-bottom: 1px solid #dddddd;
+}
+
+.grid-page .program .painting .options .options-buttons {
+  padding: 0 10px 15px;
+  border: 0;
+  outline: 0;
+  font-size: 20px;
+  cursor: pointer;
+  color: #666666;
+  background: none;
+}
+
+.grid-page .program .painting .options .options-buttons:hover {color: #000000;}
+
+.grid-page .program .painting .drawing {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  overflow-y: scroll;
+}
+
+.grid-page .program .painting .drawing .pixel-grid {
+  margin: auto;
+  border-collapse: collapse;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.grid-page .program .painting .drawing .pixel-grid td {
+  min-width: var(--td-dimensions);
+  height: var(--td-dimensions);
+  border: 1px solid #dddddd;
+  cursor: pointer;
+  background-color: #ffffff;
+}
